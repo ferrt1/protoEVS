@@ -2,17 +2,19 @@ import { BsFillPencilFill } from 'react-icons/bs'
 import { AiOutlineMail } from 'react-icons/ai'
 import { RiLockUnlockFill } from 'react-icons/ri'
 import {FcGoogle} from 'react-icons/fc'
+import { Link } from 'react-router-dom';
+
 export const LoginPage = () => {
   return (
     <div className="bg-secondary h-[100vh]">
       <div className="p-8 lg:w-1/2 mx-auto">
         <div className="bg-white rounded-t-lg p-8">
    
-         <a href="/">
+         <Link to={'/'}>
          <button className="flex items-center py-2 px-4 text-sm uppercase rounded bg-white hover:bg-gray-100 text-secondary border border-transparent hover:border-transparent hover:text-gray-700 shadow-md hover:shadow-lg font-medium transition transform hover:-translate-y-0.5 mx-auto mb-2">
                 Volver
           </button>
-         </a>
+         </Link>
 
           <p className="text-center text-sm text-gray-400 font-light">
             Inicia Sesión con:

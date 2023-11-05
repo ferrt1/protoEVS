@@ -3,6 +3,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { Link } from "react-router-dom";
 
 export const MainPage = () => {
 
@@ -74,7 +75,7 @@ export const MainPage = () => {
             </div>
             <div className="flex justify-center">
              <button className="  w-1/4  bg-white font-bold text-secondary  hover:text-white mt-2 md:mt-0" type="submit">
-                <a href="search" className="inline-block border rounded-md border-secondary w-[100%] h-[100%] p-2 hover:bg-semiBlack">BUSCAR</a>
+                <Link to="search" className="inline-block border rounded-md border-secondary w-[100%] h-[100%] p-2 hover:bg-semiBlack">BUSCAR</Link>
               </button>
             </div>
           </div>
