@@ -10,6 +10,5 @@ export const Header = () => {
           </div>
           <NavBar />
       </header>
-   
     )
 }

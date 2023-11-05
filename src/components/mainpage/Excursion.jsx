@@ -2,9 +2,9 @@
 
 export const Excursion = ({image, title, description, price}) => {
   return (
-    <div className="md:p-8 p-2 bg-white border rounded-xl">
+    <div className="md:p-8 p-2 bg-white h-[100%] border rounded-xl">
       <img
-        className="rounded-lg w-full h-[50%] object-cover mb-2"
+        className="rounded-lg w-full  object-cover mb-2"
         src= {image}
       />
 
