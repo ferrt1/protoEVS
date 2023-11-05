@@ -10,19 +10,19 @@ import './css/index.css'
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: 'https://ferrt1.github.io/protoevs/',
     element: <App/>
   },
   {
-    path: '/login',
+    path: 'https://ferrt1.github.io/protoevs/login',
     element: <LoginPage/>
   },
   {
-    path: '/search',
+    path: 'https://ferrt1.github.io/protoevs/search',
     element: <SearchTravels/>
   },
   {
-    path: '/adminform',
+    path: 'https://ferrt1.github.io/protoevs/adminform',
     element: <AdminForms/>
   },
 ])
