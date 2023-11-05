@@ -76,13 +76,13 @@ export const LoginPage = () => {
               Estoy de acuerdo con la política de privacidad
             </div>
             <div className="flex items-center justify-center mt-8">
-              <a href="adminform">
+              <Link to="adminform">
                 <button
                   id="buttonAdmin" type='button'
                   className="text-white py-2 px-4 mx-2 uppercase rounded bg-secondary hover:bg-indigo-600 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
                   ADMIN
                 </button>
-              </a>
+              </Link>
             </div>
           </form>
         </div>
