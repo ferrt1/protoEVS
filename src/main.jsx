@@ -5,7 +5,8 @@ import  App  from './App.jsx'
 import { LoginPage } from './components/login/LoginPage.jsx'
 import { SearchTravels } from './components/travels/SearchTravels.jsx'
 import { AdminForms} from './components/adminpage/AdminForms.jsx'
-
+import { Register } from './components/login/Register.jsx';
+import { UserPage } from './components/login/UserPage.jsx';
 import './css/index.css'
 
 const router = createHashRouter([
@@ -25,6 +26,14 @@ const router = createHashRouter([
     path: '/adminform',
     element: <AdminForms/>
   },
+  {
+    path: '/register',
+    element: <Register/>
+  },
+  {
+    path: '/usersession',
+    element: <UserPage/>
+  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
