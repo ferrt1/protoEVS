@@ -26,7 +26,12 @@ export const Register = () => {
   const [errorTel, setErrorTel] = useState('');
   const [formularioValido, setFormularioValido] = useState(false);
 
-
+  const handleRegistroClick = () => {
+    if (formularioValido) {
+      // El formulario es válido, mostrar la alerta
+      alert('¡Se ha registrado correctamente!');
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -42,7 +47,7 @@ export const Register = () => {
 
     const edadRegex = /^(1[89]|[2-9]\d)$/gm;
 
-    const passwordRegex = /^(?=.*[a-zA-Z]{6,})(?=.*\d).{7,}$/;
+    const passwordRegex = /^(?=.*[a-zA-Z])(?=.*\d).{7,}$/;
 
     const telefonoRegex = /^(\d{1,2}\s?\d{4}\s?\d{4})$/;
   
@@ -93,7 +98,7 @@ export const Register = () => {
       setErrorPassword('');
     } else {
       setPassword(value);
-      setErrorPassword('La contraseña debe tener mínimo 7 carácteres y un número');
+      setErrorPassword("La contraseña debe ser alfanumerica de mínimo 7 caracteres");
     }
   }
   if (name === "telInput"){
@@ -281,7 +286,8 @@ export const Register = () => {
             <div className="flex items-center justify-center mt-8">
                 <button className={`flex items-center py-2 px-4 text-sm uppercase rounded bg-white hover:bg-gray-100 text-secondary border border-transparent hover:border-transparent hover:text-gray-700 shadow-md hover:shadow-lg font-medium transition transform hover:-translate-y-0.5 mx-auto mb-2  ${formularioValido ? 'enabled:bg-secondary enabled:text-white' : "disabled:opacity-50" }`}
                 type="submit"
-                disabled={!formularioValido}>
+                disabled={!formularioValido}
+                onClick={handleRegistroClick}>
                   Registrarse
                 </button>
             </div>
