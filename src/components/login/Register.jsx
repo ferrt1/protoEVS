@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export const Register = () => {
   const [dni, setDni] = useState('');
-  const [name, setName] = useState('');
+  const [nameI, setName] = useState('');
   const [email, setEmail] = useState('');
   const [age, setAge] = useState('');
   const [password, setPassword] = useState('');
@@ -110,7 +110,7 @@ export const Register = () => {
       setErrorTel('El teléfono debe ser del formato XX XXXX XXXX o XXXXXXXXXX');
     }
   }
-  if (nombreRegex.test(name) && dniRegex.test(dni) && emailRegex.test(email) && edadRegex.test(age) && passwordRegex.test(password) && telefonoRegex.test(tel)) {
+  if (nombreRegex.test(nameI) && dniRegex.test(dni) && emailRegex.test(email) && edadRegex.test(age) && passwordRegex.test(password) && telefonoRegex.test(tel)) {
     setFormularioValido(true);
   } else {
     setFormularioValido(false);
@@ -142,7 +142,7 @@ export const Register = () => {
                 required="required"
                 placeholder="Nombre y Apellido"
                 name="nameInput"
-                value={name}
+                value={nameI}
                 onChange={handleInputChange}
               />
               <div className="absolute p-4 inset-y-0 flex items-center text-gray-600">
