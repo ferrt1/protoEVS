@@ -12,6 +12,8 @@ export const MainPage = () => {
   const [errorExitCity, setErrorCityExit] = useState("");
   const [errorDestinationCity, setErrorCityDestination] = useState("");
 
+  const [fechaRegresoOpcional, setFechaRegresoOpcional] = useState(false);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -105,21 +107,29 @@ export const MainPage = () => {
                       dateAdapter={AdapterDayjs}
                       label="Salida"
                     >
-                      <DatePicker format="DD/MM/YYYY" />
+                      <DatePicker format="DD/MM/YYYY"/>
                     </LocalizationProvider>
+                    <div className="flex items-center space-x-2  py-2">
+                    <input
+                         type="checkbox"
+                          checked={fechaRegresoOpcional}
+                        onChange={() => setFechaRegresoOpcional(!fechaRegresoOpcional)}
+                        />
+                        <label>Solo ida</label>
+                    </div>
                   </div>
                   <div>
                     <p className="font-bold md:hidden text-secondary">
-                      Fecha Llegada:
+                      Fecha Regreso:
                     </p>
                     <p className="hidden md:font-bold md:block  text-secondary">
-                      Seleccione su fecha de llegada:
+                      Seleccione su fecha de regreso:
                     </p>
                     <LocalizationProvider
                       dateAdapter={AdapterDayjs}
                       label="Destino"
                     >
-                      <DatePicker format="DD/MM/YYYY" />
+                      <DatePicker format="DD/MM/YYYY"  disabled={fechaRegresoOpcional}/>
                     </LocalizationProvider>
                   </div>
                 </div>
