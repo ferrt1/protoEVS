@@ -35,36 +35,35 @@ export const Register = () => {
     const nombreRegex = /^[a-zA-Z\s]+$/;
   
     // Validar el input del DNI usando la expresión regular
-    const dniRegex = /^\d{8}$/;
+    const dniRegex = /^(?!00000000)\d{8}$/;
 
     // Validad el input del main usando la expresion regular
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{1,5}$/;
 
-    const edadRegex = /^(?:[1-9]\d?|100)$/;
+    const edadRegex = /^(1[89]|[2-9]\d)$/gm;
 
-    const passwordRegex = /^.{7,}$/;
+    const passwordRegex = /^(?=.*[a-zA-Z]{6,})(?=.*\d).{7,}$/;
 
     const telefonoRegex = /^(\d{1,2}\s?\d{4}\s?\d{4})$/;
-
   
   if( name === "nameInput"){
     if (nombreRegex.test(value)) {
-      // El nombre es válido, actualizar el estado y borrar el mensaje de error
+
       setName(value);
       setErrorName('');
     } else {
-      // El nombre no es válido, mostrar un mensaje de error
+
       setName(value);
       setErrorName('El nombre debe contener solo letras y espacios.');
     }
   }
   if ( name === "dniCuit" ){
     if (dniRegex.test(value)) {
-      // El DNI es válido, actualizar el estado y borrar el mensaje de error
+
       setDni(value);
       setErrorDni('');
     } else {
-      // El DNI no es válido, mostrar un mensaje de error
+
       setDni(value);
       setErrorDni('El DNI debe tener exactamente 8 dígitos.');
     }
@@ -72,44 +71,36 @@ export const Register = () => {
 
   if ( name === "emailInput" ){
     if (emailRegex.test(value)) {
-      // El nombre es válido, actualizar el estado y borrar el mensaje de error
       setEmail(value);
       setErrorMail('');
     } else {
-      // El nombre no es válido, mostrar un mensaje de error
       setEmail(value);
       setErrorMail('El email debe tener un formato válido)');
     }
   }
   if ( name === "ageInput" ){
     if (edadRegex.test(value)) {
-      // El nombre es válido, actualizar el estado y borrar el mensaje de error
       setAge(value);
       setErrorAge('');
     } else {
-      // El nombre no es válido, mostrar un mensaje de error
       setAge(value);
       setErrorAge('La edad debe ser entre 0 y 99)');
     }
   }
   if ( name === "passwordInput" ){
     if (passwordRegex.test(value)) {
-      // El nombre es válido, actualizar el estado y borrar el mensaje de error
       setPassword(value);
       setErrorPassword('');
     } else {
-      // El nombre no es válido, mostrar un mensaje de error
       setPassword(value);
-      setErrorPassword('La contraseña debe tener mínimo 7 carácteres');
+      setErrorPassword('La contraseña debe tener mínimo 7 carácteres y un número');
     }
   }
   if (name === "telInput"){
     if (telefonoRegex.test(value)) {
-      // El nombre es válido, actualizar el estado y borrar el mensaje de error
       setTel(value);
       setErrorTel('');
     } else {
-      // El nombre no es válido, mostrar un mensaje de error
       setTel(value);
       setErrorTel('El teléfono debe ser del formato XX XXXX XXXX o XXXXXXXXXX');
     }
