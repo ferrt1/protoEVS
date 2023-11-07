@@ -1,10 +1,10 @@
-import { AdminHeader } from '../adminpage/AdminHeader';
+import { Header } from '../header/Header';
 import { Travels } from './Travels';
 
 export const SearchTravels = () => {
   return (
     <>
-     <AdminHeader />
+     <Header />
      <Travels 
         date='Martes 7 Nov'
         type='Semicama'

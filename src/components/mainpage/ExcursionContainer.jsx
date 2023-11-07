@@ -8,7 +8,7 @@ export const ExcursionContainer = () => {
   return (
     <section className="mt-12">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-secondary ">Algunas de nuestras excursiones</h2>
-        <div className='grid grid-cols-1 gap-12 mt-10 md:grid-cols-2 lg:grid-cols-4 px-12'>
+        <div className='grid grid-cols-1 gap-12 mt-10 xl:grid-cols-4 lg:grid-cols-2 px-12'>
         <Excursion
         image= {img1}
         title='Cataratas del Iguazú'

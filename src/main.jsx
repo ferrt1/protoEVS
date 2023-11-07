@@ -6,7 +6,8 @@ import { LoginPage } from './components/login/LoginPage.jsx'
 import { SearchTravels } from './components/travels/SearchTravels.jsx'
 import { AdminForms} from './components/adminpage/AdminForms.jsx'
 import { Register } from './components/login/Register.jsx';
-import { UserPage } from './components/login/UserPage.jsx';
+import { UserPage } from './components/user/UserPage.jsx';
+import { UserMain } from './components/user/UserMain.jsx';
 import './css/index.css'
 
 const router = createHashRouter([
@@ -31,8 +32,12 @@ const router = createHashRouter([
     element: <Register/>
   },
   {
-    path: '/usersession',
+    path: '/account',
     element: <UserPage/>
+  },
+  {
+    path: '/usersession',
+    element: <UserMain/>
   }
 ])
 
