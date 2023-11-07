@@ -1,8 +1,6 @@
-# React + Vite
+# Prototipo de Web Transporte Automotor General Sarmiento
+## Trabajo para Universidad
+### Especificación y verificación de software
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/ferrt1/protoevs/assets/74360213/e9cc6e76-8bc7-42e4-b53f-cab987e6b683)
+![image](https://github.com/ferrt1/protoevs/assets/74360213/2cdae2b8-ec65-43f4-ad5b-e33d8aa43148)
