@@ -5,6 +5,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { useState } from "react";
 import { Tooltip } from "../accesories/Tooltip";
+import { Link } from "react-router-dom";
 
 export const MainPage = () => {
   const [cityExit, setCityExit] = useState("");
@@ -158,12 +159,12 @@ export const MainPage = () => {
                   className="  w-1/4  bg-white font-bold text-secondary  hover:text-white mt-2 md:mt-0"
                   type="submit"
                 >
-                  <a
-                    href="search"
+                  <Link
+                    to="/search"
                     className="inline-block border rounded-md border-secondary w-[100%] h-[100%] p-2 hover:bg-semiBlack"
                   >
                     BUSCAR
-                  </a>
+                  </Link>
                 </button>
               </div>
             </div>
