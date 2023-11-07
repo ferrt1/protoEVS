@@ -84,7 +84,7 @@ export const Register = () => {
       setErrorAge('');
     } else {
       setAge(value);
-      setErrorAge('La edad debe ser entre 0 y 99)');
+      setErrorAge('La edad debe ser entre 18 y 99');
     }
   }
   if ( name === "passwordInput" ){
